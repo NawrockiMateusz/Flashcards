@@ -3,7 +3,7 @@
 This is a useful memory-aid application - flashcards!
 
 ## Demo
-If you want play click [here!](https://nawrockimateusz.github.io/Flashcards/)
+If you want to play, click [here!](https://nawrockimateusz.github.io/Flashcards/)
 
 ## How does it work??
 
