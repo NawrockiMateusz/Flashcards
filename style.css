@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before{
+    box-sizing: inherit;
+}
+
+
+.body{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("images/world.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+}
+
+.cardsContainer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(3, 150px);
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+.card{
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.cardText, .backCardText{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.cardText{
+    z-index: 2;
+    backface-visibility: hidden;
+    color: #ff612e;
+    background-color: rgb(255, 236, 216);
+}
+.backCardText{
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.container:hover .card{
+    transform: rotateY(180deg);
+    color: rgb(255, 236, 216);
+    background-color: #ff612e;
+}
+
+.container{
+    perspective: 1000px;
+}
